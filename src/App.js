@@ -1,25 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import LeftSideContainer from "./components/Left_Side/LeftSideContainer"
+import MessagesPageContainer from './components/RightSide/MessagesPageContainer';
+function App(props) {
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <div className="App-wraper">
+                <header className="App_header">
+                    Web WhatsApp React Asssiting Tool
+                </header>
+                <div className="App_content">
+                    <div className="App_left_side">
+                        <LeftSideContainer />
+                    </div>
+                    <div className="App_right_side">
+                        <MessagesPageContainer />
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
 }
 
 export default App;

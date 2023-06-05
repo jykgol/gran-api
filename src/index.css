@@ -1,5 +1,26 @@
+*{
+  --active-tab-marker: #00806993;
+    --app-background: #111b21;
+    --app-background-deeper: #0a1014;
+    --app-background-stripe: transparent;
+    --avatar-background: #111b21;
+    --background-lighter: #233138;
+    --background-lightest: #3b4a54;
+}
+
+#root{
+  height: 100%;
+}
+
+html{
+  height: 100%;
+}
+
 body {
+  height: 100%;
   margin: 0;
+  box-sizing: border-box;
+  background-color: var(--app-background);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
