@@ -17,24 +17,16 @@ let initialstate = {
         auth_apiTokenInstanceInput: "",
         active: true,
     },
-    idInstance: "1101827051",
-    apiTokenInstance: "a6d51508e52f4248a4849254d3582a5a68db3d1685e241329a",
+    idInstance: "",
+    apiTokenInstance: "",
     LM_Active_Chat: "",
     LM_input_Data: "",
-    LM_input_Error: false,
+    LM_input_Error: true,
     LM_chats: [
-        { id: 0, number: "79111520022", linkTo: "/0", name: "" },
-        { id: 1, number: "79218619817", linkTo: "/1", name: "" },
-        { id: 2, number: "79143339287", linkTo: "/2", name: "" },
+        
     ],
     Message_Input: "",
-    MessagesData: [{
-        id: 0, path: "/0", Messages: []
-    }, {
-        id: 1, path: "/1", Messages: []
-    }, {
-        id: 2, path: "/2", Messages: []
-    },
+    MessagesData: [
     ]
 };
 

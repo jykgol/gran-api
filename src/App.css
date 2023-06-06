@@ -68,7 +68,7 @@
   text-align: center;
   opacity: 0;
   transition: opacity 1s;
-
+  pointer-events: none;
 }
 
 .App_left_side_input_Error_active {
@@ -180,7 +180,7 @@ textarea:focus {
   border: none;
   position: fixed;
   top: 10%;
-  right: 5%;
+  right: 10%;
   width: 50px;
 }
 

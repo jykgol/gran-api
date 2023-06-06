@@ -66,7 +66,7 @@ function MessagesPage(props) {
                 {MessagesRouteRestore}
             </Routes>
 
-            <button onClick={refreshMessages} className="recive_button"><img src={refreshImage} /></button>
+            <button onClick={refreshMessages} className="recive_button"><img alt="" src={refreshImage} /></button>
 
         </div>
     );
