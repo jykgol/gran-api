@@ -1,8 +1,12 @@
 import './App.css';
+import AuthContainer from './components/Auth/AuthContainer';
 import LeftSideContainer from "./components/Left_Side/LeftSideContainer"
 import MessagesPageContainer from './components/RightSide/MessagesPageContainer';
 function App(props) {
-
+let stop = () => {
+    debugger
+    let a = props;
+}
     return (
         <div className="App">
             <div className="App-wraper">
@@ -17,6 +21,7 @@ function App(props) {
                         <MessagesPageContainer />
                     </div>
                 </div>
+                <AuthContainer/>
             </div>
         </div>
     );

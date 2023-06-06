@@ -12,15 +12,18 @@ function MessagesPage(props) {
     let addMessage = (e) => {
         if (e.keyCode === 13) {
             e.preventDefault();
+            
             axios.post("https://api.green-api.com/waInstance" + props.Left_Side_State.idInstance + "/sendMessage/" + props.Left_Side_State.apiTokenInstance, {
                 "chatId": props.Left_Side_State.LM_chats[props.Left_Side_State.LM_Active_Chat].number + "@c.us",
                 "message": props.Left_Side_State.Message_Input,
             }).then(
                 Response => {
+                    
                     props.Message_Input_OnAdding();
 
                 })
                 .catch((error) => {
+                    
                     console.log(error);
                 });
         }

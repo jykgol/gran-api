@@ -10,7 +10,7 @@ function Chat(props) {
         }
         return (
                 <NavLink key={props.id} id={props.id} to={props.linkTo}  onClick={ SetActiveChat} className={navData => navData.isActive ? "App_left_side_chats_el_active" : "App_left_side_chats_el"} >
-                        {props.number}
+                        {props.name == "" ? props.number : props.name}
                 </NavLink>
         );
 }

@@ -10,16 +10,23 @@ function LeftSide(props) {
     let addChat = (e) => {
         if (e.keyCode === 13) {
             e.preventDefault();
-            props.Left_menu_input_OnAdding();
+            if (e.target.value.length != 11 || isNaN(e.target.value)) {
+                props.LM_input_Error();
+            } else {
+                props.Left_menu_input_OnAdding();
+            }
         }
 
     }
-    let chats_restore = props.Left_Side_State.LM_chats.map(el => <Chat Left_menu_SetActiveChat={props.Left_menu_SetActiveChat} key={el.id} id={el.id} number={el.number} linkTo={el.linkTo}/>)
+    let chats_restore = props.Left_Side_State.LM_chats.map(el => <Chat Left_menu_SetActiveChat={props.Left_menu_SetActiveChat} key={el.id} id={el.id} number={el.number} name={el.name} linkTo={el.linkTo} />)
     return (
         <div>
 
             <div className="App_left_side_input">
                 <textarea wrap="off" value={props.Left_Side_State.LM_input_Data} onChange={inputOnChangeFun} placeholder="Введите номер телефона" onKeyDown={addChat} />
+                <div className={props.Left_Side_State.LM_input_Error ? "App_left_side_input_Error App_left_side_input_Error_active" : "App_left_side_input_Error"}>
+                    Пожалуйста, введите номер в формате "79123456789"
+                </div>
             </div>
             <div className="App_left_side_chats">
                 {chats_restore}
