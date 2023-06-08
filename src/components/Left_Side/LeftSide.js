@@ -10,7 +10,7 @@ function LeftSide(props) {
     let addChat = (e) => {
         if (e.keyCode === 13) {
             e.preventDefault();
-            if (e.target.value.length !== 11 || isNaN(e.target.value)) {
+            if (e.target.value.length !== 11 || isNaN(e.target.value) || e.target.value[0]==="+" || e.target.value[0]==="-") {
                 props.LM_input_Error();
             } else {
                 props.Left_menu_input_OnAdding();
