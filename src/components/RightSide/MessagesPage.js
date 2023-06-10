@@ -62,10 +62,11 @@ function MessagesPage(props) {
             <div className="App_left_side_input messages_input">
                 <textarea wrap="off" value={props.Left_Side_State.Message_Input} onChange={inputOnChangeFun} placeholder="Ввод сообщения" onKeyDown={addMessage} />
             </div>
-            <Routes>
+            <div className="MP_messages_container">
+                <Routes >
                 {MessagesRouteRestore}
-            </Routes>
-
+                </Routes>
+            </div>
             <button onClick={refreshMessages} className="recive_button"><img alt="" src={refreshImage} /></button>
 
         </div>
